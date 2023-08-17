@@ -1,0 +1,25 @@
+version: "3.1"
+
+intents:
+  - check_stock_status
+
+entities:
+  - company
+
+slots:
+  company:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: company
+
+responses:
+  utter_goodbye:
+    - text: "Hope it was helpful"
+
+actions:
+  - action_check_stock_status
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
