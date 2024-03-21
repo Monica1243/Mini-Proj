@@ -1,0 +1,48 @@
+header{
+    min-width: 500px;
+    display: flex;
+    padding: 0.5em 0 0.5em 0;
+    margin-top: 0;
+    justify-content: space-between;
+    background-color: #5DCEBA;
+}
+.company-profile {
+    margin-left: 5em;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    width :20em;
+    background-color: #EEC5C5;
+    border-radius: 1em;
+}
+
+.company-profile img {
+    width: 2em; 
+    height: auto; 
+    margin-right: 1em; 
+}
+
+.company-profile .company-name {
+    font-size: 2em;
+    font-weight: bolder; 
+}
+
+.profile-container {
+    display: flex;
+    margin: 1em;
+    margin-right: 5em;
+    justify-content: flex-end; 
+}
+
+.profile {
+    font-size: 1.5em; 
+}
+
+.user-id {
+    display: inline; 
+    margin-right: 0.5em; 
+}
+
+.profile i {
+    font-size: 1em; 
+}
