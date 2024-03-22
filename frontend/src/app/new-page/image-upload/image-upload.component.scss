@@ -1,0 +1,66 @@
+.image-container{
+    width: 20em;
+    margin-top: 2em;
+    margin-left: 5em;
+    padding: 2em;
+    border: 3px solid;
+    border-radius: 2em;
+    color: aliceblue;
+    background-color: #37455A;
+    display: grid;
+}
+.image-upload{
+    display: flex;
+    align-items: center;
+}
+
+.photo-icon{
+    color: black;
+    padding: 0.5em;
+    font-size: 2em;
+    background-color: #4D607C;
+    margin-right:1em ;
+    border-radius: 0.25em;
+}
+
+.choose-image{
+    display: flex;
+    flex-direction: column;
+    justify-items: space-between;
+}
+
+.image-text{
+    padding-bottom: 1em;
+    font-size: small;
+}
+
+.image{
+    width: 12em;
+    padding: 0.5em;
+    background-color: #4D607C;
+    font-weight: 200;
+    border-radius:0.5em ;
+}
+.image input[type=file]::-webkit-file-upload-button{
+    padding: 0.5em;
+    background-color: #4D607C;
+    border: 1px solid #10B981;
+    font-weight: bold;
+    color: #10B981;
+    border-radius: 0.5em;
+    margin-right: 1em;
+}
+
+.save-button{
+    padding: 1em 1em 0 0;
+    justify-self:right;
+}
+
+.save-button button{
+    background-color: #10B981;
+    color: wheat;
+    font-weight: 300;
+    padding: 0.5em 1em 0.5em 1em; 
+    border-radius: 0.5em;
+    border: none;
+}
