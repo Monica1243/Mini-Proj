@@ -1,7 +1,15 @@
 .content-container{
     margin: 1em;
-    height: 100%;
-    width: 60em;
+    height: 80vh;
+    width: 55em;
     margin-right:5em ;
     background-color:rgb(194, 218, 210);
+}
+.textarea{
+    margin: 1em;
+    padding: 1em;
+    width: 90%;
+    font-size: medium;
+    max-height: 500px;
+    overflow-y: auto;
 }
