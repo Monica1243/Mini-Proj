@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NewPageModule } from './new-page/new-page.module';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
 
 import { HomeModule } from './home/home.module';
 import { HeaderComponent } from './shared/templates/header/header/header.component';
@@ -19,7 +20,8 @@ import { HeaderComponent } from './shared/templates/header/header/header.compone
     AppRoutingModule,
     HomeModule,
     NewPageModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

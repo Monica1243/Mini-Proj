@@ -26,6 +26,7 @@
     border-bottom: 1px solid;
 }
 
+
 .title{
     padding: 0.25em;
 }
@@ -42,8 +43,12 @@
     align-items: center;
 }
 
-.create-option .create-page h3{
+.create-option .create-page a{
     margin-right:0.75em ;
+    text-decoration: none;
+    color: brown;
+    font-weight: 500;
+    cursor: pointer;
 }
 
 .category{
@@ -59,4 +64,5 @@
     background-color: beige;
     padding: 0.5em;
     margin: 0.75em;
+    cursor: pointer;
 }

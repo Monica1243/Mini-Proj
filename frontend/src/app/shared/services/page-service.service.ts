@@ -15,16 +15,13 @@ export class PageServiceService {
       page : "Title2"
     },
     {
-      page : "Title2"
+      page : "Title3"
     },
     {
-      page : "Title2"
+      page : "Title4"
     },
     {
-      page : "Title2"
-    },
-    {
-      page : "Title2"
+      page : "Title5"
     }
   ]
 }

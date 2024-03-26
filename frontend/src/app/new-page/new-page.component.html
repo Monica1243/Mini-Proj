@@ -1,9 +1,9 @@
 <div class="create-page">
     <div class="title">
-        <input type="text" placeholder="Enter a Title " #titleBox (input)="resizeTitleBox(titleBox)">
+        <input type="text" placeholder="Enter a Title" [(ngModel)]="titleQueryParam" name="titleQueryParam" #titleBox (input)="resizeTitleBox(titleBox)">
     </div>
     <div class="save-button">
-        <button>Save</button>
+        <button (click)="onSave()">Save</button>
     </div>
 </div>
 <div class="container">
