@@ -5,6 +5,7 @@ import { RouterModule, Router } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { HomeModule } from './home/home.module';
 import { HeaderComponent } from './shared/templates/header/header/header.component';
@@ -21,7 +22,8 @@ import { HeaderComponent } from './shared/templates/header/header/header.compone
     HomeModule,
     NewPageModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

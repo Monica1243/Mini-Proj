@@ -10,11 +10,11 @@
     <div class="new-page-container">
         <div class="category">
             <label for="category">Category</label>
-            <input type="text" name="category" id="category">
+            <input type="text" name="category" [(ngModel)]="CategoryQueryParam"  id="category">
         </div>
         <div class="category">
             <label for="category">Sub-Title</label>
-            <input type="text" name="category" id="category">
+            <input type="text" name="category" [(ngModel)]="SubTitleQueryParam"  id="category">
         </div>
         <image-upload></image-upload> 
     </div>

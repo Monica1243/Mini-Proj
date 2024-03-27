@@ -1,5 +1,6 @@
 import { Component, ElementRef, AfterViewInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { PageServiceService } from '../shared/services/page-service.service';
 
 @Component({
   selector: 'app-new-page',
@@ -8,15 +9,23 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class NewPageComponent {
   titleQueryParam: string = '';
+  SubTitleQueryParam: any = '';
+  CategoryQueryParam: string = '';
 
-  constructor(private route: ActivatedRoute, private router: Router){}
+  constructor(private route: ActivatedRoute, private router: Router, private pageService: PageServiceService){}
 
-  ngOnInit(event: Event): void {
-    this.route.queryParams.subscribe(params => {
-      this.titleQueryParam = params['value'] || null; 
-    });
-    
+  ngOnInit(): void {
+    for (const element of this.pageService.page) {
+      if (element.Page_Id === this.pageService.Page_Id) {
+        this.titleQueryParam = element.Title;
+        this.CategoryQueryParam = element.Category;
+        this.SubTitleQueryParam = element.SubTitle;
+        break; 
+      }
+    }
   }
+  
+
   resizeTitleBox(element: HTMLInputElement) {
     element.style.width = 'auto';
     if (element.scrollWidth > parseInt(window.getComputedStyle(element).maxWidth || '0')) {

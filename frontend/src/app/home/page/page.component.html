@@ -3,12 +3,12 @@
         <div class="page-image">
             <img src="" alt="image">
         </div>
-        <h2 class="title">{{page.page}}</h2>
-        <h3 class="category">Category</h3>
-        <p class="sub-title">Sub-Title</p>
+        <h4 class="title">{{page.Title}}</h4>
+        <h5 class="category">{{page.Category}}</h5>
+        <p class="sub-title">{{page.SubTitle}}</p>
         <div class="create-page">
-            <button (click)="naviagteToPage(page.page)">Edit</button>
-            <button (click)="deletePage(page.page)">Delete</button>
+            <button (click)="naviagteToPage(page.Page_Id)">Edit</button>
+            <button (click)="deletePage(page.Page_Id)">Delete</button>
         </div>
     </div>
     <div class="create-option">
@@ -19,7 +19,7 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
             sed do eiusmod tempor.</p>
         <div class="create-page">
-            <a (click)="naviagteToPage('new')">Create Page</a>
+            <a (click)="naviagteToNewPage()">Create Page</a>
             <i class="fa-solid fa-arrow-right"></i>
         </div>
     </div>

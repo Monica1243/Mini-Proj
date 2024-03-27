@@ -19,7 +19,7 @@ namespace backend.Controllers
             _context = context;
         }
         [HttpPost]
-        public async Task<IActionResult> PostPages([FromBody] PagesDTO pagesDto)
+        public async Task<IActionResult> PostPages([FromBody] AllPage pagesDto)
         {
             if (pagesDto == null)
             {
@@ -65,7 +65,7 @@ namespace backend.Controllers
             {
                 return StatusCode(500, ex.Message);
             }
-            return StatusCode(200);
+            return new JsonResult(200);
         }
 
         [HttpGet]
@@ -78,17 +78,16 @@ namespace backend.Controllers
                 return StatusCode(404, "No Object Found");
             }
 
-            var pageDto = new List<AllPage>();
+            var pageDto = new List<PagesDTO>();
             foreach (var page in Page)
             {
-                pageDto.Add(new AllPage()
+                pageDto.Add(new PagesDTO()
                 {
                     Page_Id = page.Page_Id,
                     Title = page.Title,
                     SubTitle = page.SubTitle,
                     Category = page.Category,
-                    Content = page.Content,
-                }); ;
+                });
             }
             return new JsonResult(pageDto);
         }
@@ -103,19 +102,15 @@ namespace backend.Controllers
                 return StatusCode(404, "Object Not Found");
             }
 
-            var allPage = new AllPage
+            var allPage = new ContentDTO
             {
-                Page_Id = page.Page_Id,
-                Title = page.Title,
-                SubTitle = page.SubTitle,
-                Category = page.Category,
                 Content = page.Content
             };
             return new JsonResult(allPage);
         }
         
         [HttpPut("{Page_Id}")]
-        public async Task<IActionResult> UpdatePages([FromRoute] Guid Page_Id, [FromBody]PagesDTO pageDTO)
+        public async Task<IActionResult> UpdatePages([FromRoute] Guid Page_Id, [FromBody]AllPage pageDTO)
         {
             var Page = await _context.Pages.FindAsync(Page_Id);
 

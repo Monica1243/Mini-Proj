@@ -11,21 +11,35 @@ export class PageComponent {
 
   constructor(private pageService: PageServiceService, private router: Router){}
 
-  pages = this.pageService.page;
+  pages: any[] = this.pageService.page;
 
-  deletePage(title: string | undefined) {
-    if (title) {
-        const index = this.pages.findIndex((page) => page.page === title);
-        if (index !== -1) {
-            this.pages.splice(index, 1); 
-        }
+  ngOnInit(){
+    this.pageService.getAllPage().then(
+      data => {
+        this.pages = data;
+      }
+    ).catch(err => console.log('Error in getting all the pages'));
+  }
+
+  deletePage(Page_Id: string | null) {
+    if (Page_Id) {
+        this.pageService.delete(Page_Id).then(data => {
+          if(data == 200){
+            window.location.reload();
+          }
+        })
     }
   }
 
-  naviagteToPage(value: string){
-    if(value){
-      this.router.navigate(['NewPage'], { queryParams : {value : value}});
+  naviagteToPage(Page_Id: string ){
+    if(Page_Id){
+      this.pageService.Page_Id = Page_Id;
+      this.router.navigate(['NewPage'], { queryParams : {Page_Id : Page_Id}});
     }
+  }
+
+  naviagteToNewPage(){
+    this.router.navigate(['NewPage']);
   }
 
 }

@@ -8,13 +8,17 @@
 .page{
     margin: 1em;
     width: 15em;
-    height: 20em;
+    height: 25em;
     border: 2px solid;
+}
+
+.page p{
+    font-size: 1em;
 }
 
 .create-option{
     margin: 1em;
-    width: 15%;
+    width: 15em;
     height: 20em;
     border: 2px solid;
 }
@@ -22,13 +26,12 @@
 .page-image{
     width: 100%;
     height: 45%;
-    background-color: aquamarine;
     border-bottom: 1px solid;
 }
 
 
 .title{
-    padding: 0.25em;
+    padding: 0.5em;
 }
 
 .create-option p{
@@ -40,7 +43,6 @@
     flex-direction: row;
     color: brown;
     padding: 0.5em;
-    align-items: center;
 }
 
 .create-option .create-page a{
